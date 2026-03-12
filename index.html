@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#b71c1c">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Yugadi 2026 - Registration | Sharavathi Kannada Balaga</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --red: #b71c1c;
+    --red-dark: #7f0000;
+    --saffron: #FF6F00;
+    --gold: #F9A825;
+    --turmeric: #FDD835;
+    --green: #2E7D32;
+    --green-light: #43A047;
+    --mango: #8BC34A;
+    --cream: #FFF8E1;
+    --bg: #FFFDE7;
+    --card: #FFFFFF;
+    --text: #3E2723;
+    --text-light: #795548;
+    --border: #E8D5B7;
+    --error: #d32f2f;
+    --success: #2E7D32;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* === Mango Leaf Border === */
+  .mango-border {
+    height: 28px;
+    background: linear-gradient(135deg, var(--green) 25%, var(--mango) 25%, var(--mango) 50%, var(--green) 50%, var(--green) 75%, var(--mango) 75%);
+    background-size: 40px 40px;
+  }
+
+  .mango-border::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold), var(--turmeric), var(--gold), var(--saffron));
+  }
+
+  /* === Header === */
+  .header {
+    background: linear-gradient(160deg, var(--red) 0%, var(--red-dark) 60%, #4A0000 100%);
+    color: white;
+    text-align: center;
+    padding: 1.8rem 1rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 85%, rgba(249,168,37,0.15) 0%, transparent 40%),
+      radial-gradient(circle at 85% 15%, rgba(249,168,37,0.1) 0%, transparent 35%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 0 L42 38 L80 40 L42 42 L40 80 L38 42 L0 40 L38 38Z' fill='%23ffffff' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  .header-content { position: relative; z-index: 1; }
+
+  .header-logo {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.3);
+    margin: 0 auto 0.5rem;
+    display: block;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+
+  .rangoli-divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0.5rem; margin: 0.2rem 0 0.5rem; font-size: 1.1rem; opacity: 0.7;
+  }
+
+  .rangoli-divider .dot { width: 5px; height: 5px; background: var(--turmeric); border-radius: 50%; }
+
+  .org-name { font-size: 0.72rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; opacity: 0.85; }
+  .org-kannada { font-size: 0.95rem; opacity: 0.75; margin-bottom: 0.2rem; }
+
+  .event-title {
+    font-size: 2.8rem; font-weight: 800; line-height: 1.1;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    background: linear-gradient(180deg, #FFFFFF 30%, var(--turmeric) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  .event-year { font-size: 1rem; font-weight: 300; letter-spacing: 4px; opacity: 0.7; margin-bottom: 0.2rem; }
+  .event-tagline { font-size: 0.9rem; font-weight: 300; opacity: 0.85; margin-bottom: 0.8rem; }
+
+  .event-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+
+  .badge {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    background: rgba(255,255,255,0.12); backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.35rem 0.8rem; border-radius: 20px; font-size: 0.78rem;
+  }
+
+  /* === Early Bird === */
+  .early-bird {
+    background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
+    background-size: 200% 100%; animation: earlyShimmer 3s ease infinite;
+    color: white; text-align: center; padding: 0.55rem 1rem; font-size: 0.84rem; font-weight: 600;
+  }
+
+  @keyframes earlyShimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+  /* === Day Cards === */
+  .event-days { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1rem; }
+
+  .day-card {
+    background: var(--card); border: 2px solid var(--border); border-radius: 12px;
+    padding: 1rem; text-align: center; overflow: hidden; position: relative;
+  }
+
+  .day-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+  .day-card.day1::before { background: linear-gradient(90deg, var(--red), var(--saffron)); }
+  .day-card.day2::before { background: linear-gradient(90deg, var(--green), var(--mango)); }
+
+  .day-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.2rem; }
+  .day-card.day1 .day-label { color: var(--red); }
+  .day-card.day2 .day-label { color: var(--green); }
+
+  .day-event-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.05rem; }
+  .day-event-kannada { font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.4rem; }
+  .day-detail { font-size: 0.76rem; color: var(--text-light); display: flex; align-items: center; justify-content: center; gap: 0.3rem; margin-bottom: 0.1rem; }
+
+  /* === About Section === */
+  .about-section {
+    background: var(--card); border-radius: 12px; margin-bottom: 1rem;
+    overflow: hidden; border: 1px solid var(--border); box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .about-card { padding: 1.2rem; }
+  .about-card:first-child { border-right: 1px solid var(--border); }
+
+  .about-tag { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.2rem; }
+  .about-card.about-yugadi .about-tag { color: var(--red); }
+  .about-card.about-badoota .about-tag { color: var(--green); }
+
+  .about-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.1rem; }
+  .about-card .about-kannada { font-size: 0.78rem; color: var(--text-light); margin-bottom: 0.4rem; }
+  .about-card p { font-size: 0.77rem; color: var(--text-light); line-height: 1.55; }
+
+  /* === Container === */
+  .container { max-width: 720px; margin: 0 auto; padding: 1.2rem 0.8rem 3rem; }
+
+  /* === Form Sections === */
+  .form-section {
+    background: var(--card); border-radius: 12px; padding: 1.4rem;
+    margin-bottom: 0.9rem; box-shadow: 0 1px 8px rgba(0,0,0,0.05); border: 1px solid var(--border);
+  }
+
+  .section-head {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--cream);
+  }
+
+  .section-icon {
+    width: 34px; height: 34px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;
+  }
+
+  .si-red { background: rgba(183,28,28,0.08); }
+  .si-gold { background: rgba(249,168,37,0.12); }
+  .si-green { background: rgba(46,125,50,0.08); }
+  .si-saffron { background: rgba(255,111,0,0.08); }
+
+  .section-title { font-size: 1rem; font-weight: 600; color: var(--red); }
+
+  /* === Form Elements === */
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.8rem; }
+
+  .fg { margin-bottom: 0.8rem; }
+  .fg:last-child { margin-bottom: 0; }
+
+  label { display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.25rem; }
+  .req { color: var(--red); }
+
+  input[type="text"],input[type="email"],input[type="tel"],input[type="number"],select,textarea {
+    width: 100%; padding: 0.6rem 0.8rem; border: 1.5px solid var(--border); border-radius: 8px;
+    font-family: inherit; font-size: 16px; color: var(--text); background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none; appearance: none;
+  }
+
+  input:focus,select:focus,textarea:focus {
+    outline: none; border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(255,111,0,0.1);
+  }
+
+  textarea { resize: vertical; min-height: 60px; }
+
+  /* Error state */
+  .field-error { border-color: var(--error) !important; }
+  .error-text { color: var(--error); font-size: 0.72rem; margin-top: 0.15rem; display: none; }
+  .error-text.show { display: block; }
+
+  /* Pills */
+  .pills { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.2rem; }
+  .pill { position: relative; cursor: pointer; }
+  .pill input { position: absolute; opacity: 0; }
+
+  .pill-label {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    padding: 0.4rem 0.8rem; border: 1.5px solid var(--border); border-radius: 8px;
+    font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: #fff;
+  }
+
+  .pill input:checked + .pill-label {
+    border-color: var(--red); background: rgba(183,28,28,0.05); color: var(--red); font-weight: 600;
+  }
+
+  .pill-label:hover { border-color: var(--saffron); }
+
+  /* === Membership Checkbox === */
+  .member-confirm {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    padding: 0.8rem; background: rgba(183,28,28,0.03); border: 1.5px solid var(--border);
+    border-radius: 10px; margin-bottom: 0.8rem; cursor: pointer; transition: all 0.2s;
+  }
+
+  .member-confirm:hover { border-color: var(--saffron); }
+  .member-confirm.checked { border-color: var(--red); background: rgba(183,28,28,0.06); }
+
+  .member-confirm input[type="checkbox"] {
+    width: 20px; height: 20px; margin-top: 2px; accent-color: var(--red); flex-shrink: 0; cursor: pointer;
+  }
+
+  .member-confirm-text { flex: 1; }
+  .member-confirm-title { font-weight: 600; font-size: 0.88rem; }
+  .member-confirm-sub { font-size: 0.75rem; color: var(--text-light); }
+
+  .member-status-badge {
+    display: inline-block; padding: 0.2rem 0.6rem; border-radius: 12px;
+    font-size: 0.72rem; font-weight: 600; margin-top: 0.3rem;
+  }
+
+  .badge-verified { background: rgba(46,125,50,0.1); color: var(--green); }
+  .badge-unverified { background: rgba(255,111,0,0.1); color: var(--saffron); }
+  .badge-notmember { background: rgba(121,85,72,0.1); color: var(--text-light); }
+
+  /* === Pricing Cards === */
+  .pricing-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.5rem 0 0.8rem; }
+
+  .pcard {
+    border: 2px solid var(--border); border-radius: 12px; padding: 1rem;
+    text-align: center; cursor: pointer; transition: all 0.25s; position: relative; background: #fff;
+  }
+
+  .pcard:hover { border-color: var(--saffron); transform: translateY(-1px); }
+  .pcard.active { border-color: var(--red); background: rgba(183,28,28,0.03); }
+
+  .pcard.active::after {
+    content: '\2713'; position: absolute; top: 8px; right: 10px;
+    background: var(--red); color: white; width: 20px; height: 20px;
+    border-radius: 50%; font-size: 0.7rem; display: flex; align-items: center; justify-content: center;
+  }
+
+  .pcard input { position: absolute; opacity: 0; }
+
+  .pcard-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.3rem; }
+  .pcard.member-card .pcard-tag { color: var(--red); }
+  .pcard.nonmember-card .pcard-tag { color: var(--saffron); }
+
+  .pcard-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+
+  .pcard-day-label {
+    font-size: 0.65rem; font-weight: 600; color: var(--text-light);
+    margin-bottom: 0.15rem; text-transform: uppercase; letter-spacing: 1px;
+  }
+
+  .pcard-row {
+    display: flex; justify-content: space-between; font-size: 0.8rem;
+    padding: 0.15rem 0; border-bottom: 1px dashed rgba(0,0,0,0.07);
+  }
+
+  .pcard-row:last-of-type { border: none; }
+  .pcard-price { font-weight: 600; color: var(--red); }
+
+  .pcard-early {
+    margin-top: 0.4rem; font-size: 0.7rem; color: var(--green); font-weight: 600;
+    background: rgba(46,125,50,0.06); padding: 0.2rem 0.5rem; border-radius: 4px; display: inline-block;
+  }
+
+  /* === Counters === */
+  .counters { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 0.4rem; }
+  .counter-group label { font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.2rem; }
+  .counter { display: flex; align-items: center; gap: 0.5rem; }
+
+  .cbtn {
+    width: 40px; height: 40px; border: 1.5px solid var(--border); border-radius: 8px;
+    background: #fff; font-size: 1.2rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text); font-weight: 700; transition: all 0.15s;
+    -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+    -webkit-user-select: none; user-select: none; position: relative; z-index: 1;
+  }
+
+  .cbtn:hover, .cbtn:active { border-color: var(--red); color: var(--red); background: rgba(183,28,28,0.04); }
+  .cval { font-size: 1.05rem; font-weight: 700; min-width: 24px; text-align: center; }
+
+  /* === Event Checkboxes === */
+  .event-check {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    padding: 0.7rem; border: 1.5px solid var(--border); border-radius: 10px;
+    margin-bottom: 0.5rem; cursor: pointer; transition: all 0.2s;
+    -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+  }
+
+  .event-check:hover { border-color: var(--saffron); }
+  .event-check.checked { border-color: var(--red); background: rgba(183,28,28,0.03); }
+
+  .event-check input[type="checkbox"] {
+    width: 18px; height: 18px; margin-top: 2px; accent-color: var(--red); flex-shrink: 0;
+  }
+
+  .event-check-info { flex: 1; }
+  .event-check-title { font-weight: 600; font-size: 0.88rem; }
+  .event-check-sub { font-size: 0.75rem; color: var(--text-light); }
+
+  /* === Summary === */
+  .summary {
+    background: var(--cream); border: 2px solid var(--border); border-radius: 10px;
+    padding: 1rem; margin-top: 0.8rem;
+  }
+
+  .summary-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.4rem; }
+
+  .srow { display: flex; justify-content: space-between; padding: 0.25rem 0; font-size: 0.83rem; }
+
+  .srow.total {
+    border-top: 2px solid var(--border); margin-top: 0.4rem; padding-top: 0.5rem;
+    font-weight: 800; font-size: 1rem; color: var(--red);
+  }
+
+  .discount { color: var(--green); font-weight: 600; }
+
+  /* === Payment === */
+  .pay-options { display: grid; gap: 0.5rem; margin-top: 0.3rem; }
+
+  .pay-opt {
+    border: 1.5px solid var(--border); border-radius: 10px; padding: 0.8rem;
+    cursor: pointer; transition: all 0.2s; position: relative;
+    -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+    -webkit-user-select: none; user-select: none;
+  }
+
+  .pay-opt:hover { border-color: var(--saffron); }
+  .pay-opt.active { border-color: var(--red); background: rgba(183,28,28,0.03); }
+  .pay-opt > input[type="radio"] { position: absolute; opacity: 0; }
+
+  .pay-head { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; }
+
+  .pay-body {
+    margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed var(--border);
+    font-size: 0.8rem; color: var(--text-light); display: none;
+  }
+
+  .pay-opt.active .pay-body { display: block; }
+  .pay-info { display: flex; justify-content: space-between; padding: 0.15rem 0; }
+  .pay-info-label { font-weight: 500; color: var(--text); }
+  .pay-note { margin-top: 0.25rem; font-size: 0.75rem; color: var(--saffron); font-weight: 500; }
+
+  .zelle-txn-row {
+    margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed var(--border);
+  }
+  .zelle-txn-row label { font-size: 0.8rem; font-weight: 600; color: var(--text); display: block; margin-bottom: 0.3rem; }
+  .zelle-txn-row input {
+    width: 100%; padding: 0.55rem 0.7rem; border: 1.5px solid var(--border); border-radius: 8px;
+    font-family: 'Poppins', sans-serif; font-size: 16px; background: #FFFEF5;
+    transition: border-color 0.2s; -webkit-appearance: none; appearance: none;
+    touch-action: auto; position: relative; z-index: 10;
+  }
+  .zelle-txn-row input:focus { outline: none; border-color: var(--saffron); }
+  .zelle-txn-row .field-hint { font-size: 0.72rem; color: var(--text-light); margin-top: 0.2rem; }
+
+  /* === Toggle === */
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 0.3rem 0; }
+  .toggle { position: relative; width: 46px; height: 24px; flex-shrink: 0; display: block; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  .toggle input { position: absolute; opacity: 0; width: 100%; height: 100%; top: 0; left: 0; z-index: 2; cursor: pointer; margin: 0; }
+
+  .toggle-track {
+    position: absolute; inset: 0; background: #ccc; border-radius: 24px; cursor: pointer; transition: 0.3s; z-index: 1;
+  }
+
+  .toggle-track::before {
+    content: ''; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px;
+    background: #fff; border-radius: 50%; transition: 0.3s;
+  }
+
+  .toggle input:checked + .toggle-track { background: var(--red); }
+  .toggle input:checked + .toggle-track::before { transform: translateX(22px); }
+
+  .perf-fields { display: none; margin-top: 0.8rem; }
+  .perf-fields.show { display: block; }
+
+  /* === Submit === */
+  .submit-area { text-align: center; margin-top: 1.3rem; }
+
+  .btn-submit {
+    background: linear-gradient(135deg, var(--red), var(--red-dark));
+    color: white; border: none; padding: 0.85rem 3rem;
+    font-family: inherit; font-size: 1rem; font-weight: 700;
+    border-radius: 10px; cursor: pointer; transition: all 0.3s;
+    box-shadow: 0 4px 18px rgba(183,28,28,0.3);
+    width: 100%; max-width: 360px;
+    touch-action: manipulation;
+  }
+
+  .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(183,28,28,0.4); }
+  .btn-submit:active { transform: translateY(0); }
+  .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .footer-note { text-align: center; margin-top: 0.7rem; font-size: 0.73rem; color: var(--text-light); line-height: 1.5; }
+  .footer-note a { color: var(--red); text-decoration: none; }
+
+  /* === Spinner === */
+  .spinner {
+    display: none; width: 20px; height: 20px;
+    border: 2.5px solid rgba(255,255,255,0.3); border-top-color: white;
+    border-radius: 50%; animation: spin 0.6s linear infinite;
+    margin: 0 auto;
+  }
+
+  .spinner.show { display: inline-block; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* === Toast === */
+  .toast {
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    padding: 0.7rem 1.2rem; border-radius: 10px; font-size: 0.85rem; font-weight: 500;
+    color: white; z-index: 2000; opacity: 0; transition: opacity 0.3s;
+    max-width: 90%; text-align: center;
+  }
+
+  .toast.show { opacity: 1; }
+  .toast.success { background: var(--green); }
+  .toast.error { background: var(--error); }
+
+  /* === Modal === */
+  .modal-bg {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+    z-index: 1000; align-items: center; justify-content: center; padding: 1rem;
+  }
+
+  .modal-bg.show { display: flex; }
+
+  .modal {
+    background: #fff; border-radius: 16px; padding: 2rem; max-width: 440px; width: 100%;
+    text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  }
+
+  .modal-icon {
+    width: 56px; height: 56px; background: var(--green); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 0.7rem; font-size: 1.6rem; color: white;
+  }
+
+  .modal h2 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+  .modal p { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
+
+  .btn-done {
+    margin-top: 0.8rem; background: var(--red); color: white; border: none;
+    padding: 0.5rem 1.8rem; border-radius: 8px;
+    font-family: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 640px) {
+    .event-title { font-size: 2rem; }
+    .event-badges { flex-direction: column; align-items: center; gap: 0.35rem; }
+    .badge { font-size: 0.74rem; padding: 0.3rem 0.7rem; }
+    .row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .pricing-cards { grid-template-columns: 1fr; }
+    .event-days { grid-template-columns: 1fr; gap: 0.6rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-card:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+    .form-section { padding: 1rem; }
+    .container { padding: 1rem 0.6rem 3rem; }
+    .counters { gap: 0.8rem; }
+    .header { padding: 1.5rem 0.8rem 1.6rem; }
+    .header-logo { width: 60px; height: 60px; }
+    .pills { gap: 0.35rem; }
+    .pill-label { padding: 0.35rem 0.65rem; font-size: 0.76rem; }
+    .pcard { padding: 0.9rem; }
+  }
+
+  @media (max-width: 380px) {
+    .event-title { font-size: 1.7rem; }
+    .org-name { font-size: 0.65rem; letter-spacing: 2px; }
+    .counters { flex-direction: column; gap: 0.6rem; }
+    .counter-group { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mango-border"></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-content">
+    <img src="https://www.sharavationline.org/wp-content/uploads/2023/09/logo-120x120-1.png" alt="Sharavathi Kannada Balaga Logo" class="header-logo">
+    <div class="org-name">Sharavathi Kannada Balaga</div>
+    <div class="org-kannada">ಶರಾವತಿ ಕನ್ನಡ ಬಳಗ</div>
+    <div class="rangoli-divider">
+      <span class="dot"></span><span>&#10043;</span><span class="dot"></span><span>&#10043;</span><span class="dot"></span>
+    </div>
+    <h1 class="event-title">Yugadi 2026</h1>
+    <div class="event-year">&mdash; ಹೊಸ ವರ್ಷ &mdash;</div>
+    <p class="event-tagline">Kannada New Year Celebration &amp; Cultural Extravaganza</p>
+    <div class="event-badges">
+      <span class="badge">&#128197; April 18 &amp; 19, 2026</span>
+      <span class="badge">&#128205; Columbia, Maryland</span>
+      <span class="badge">&#128222; 202-768-8161</span>
+    </div>
+  </div>
+</header>
+
+<div class="early-bird" id="earlyBirdBanner">
+  &#127881; Early Bird: 10% OFF &mdash; Register by March 31, 2026! &#127881;
+</div>
+
+<div class="container">
+
+  <!-- Day Cards -->
+  <div class="event-days">
+    <div class="day-card day1">
+      <div class="day-label">Day 1 &mdash; Saturday</div>
+      <div class="day-event-name">Yugadi Celebration</div>
+      <div class="day-event-kannada">ಯುಗಾದಿ ಹಬ್ಬ</div>
+      <div class="day-detail">&#128197; April 18, 2026</div>
+      <div class="day-detail">&#128205; Oakland Mills High School</div>
+      <div class="day-detail" style="font-size:0.7rem;">9410 Kilimanjaro Rd, Columbia, MD 21045</div>
+    </div>
+    <div class="day-card day2">
+      <div class="day-label">Day 2 &mdash; Sunday</div>
+      <div class="day-event-name">Badoota</div>
+      <div class="day-event-kannada">ಬಾಡೂಟ</div>
+      <div class="day-detail">&#128197; April 19, 2026</div>
+      <div class="day-detail">&#128205; Venue TBD</div>
+      <div class="day-detail" style="font-size:0.7rem;">Details to be announced</div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="about-section">
+    <div class="about-grid">
+      <div class="about-card about-yugadi">
+        <div class="about-tag">About the Festival</div>
+        <h3>Yugadi / Ugadi</h3>
+        <div class="about-kannada">ಯುಗಾದಿ ಹಬ್ಬ &bull; ಹೊಸ ವರ್ಷ</div>
+        <p>Yugadi marks the beginning of the new year in the Hindu lunisolar calendar, celebrated with great fervor across Karnataka. Families gather to savor the iconic <em>Bevu-Bella</em> (neem and jaggery), symbolizing life's blend of bitter and sweet. The day features Panchanga Shravana, rangoli, cultural performances, and a grand festive feast.</p>
+      </div>
+      <div class="about-card about-badoota">
+        <div class="about-tag">Day 2 Tradition</div>
+        <h3>Badoota</h3>
+        <div class="about-kannada">ಬಾಡೂಟ</div>
+        <p>Badoota is a beloved tradition observed the day after Yugadi in many Karnataka households. After the sacred vegetarian observance, families and friends come together for a hearty non-vegetarian feast featuring classic Karnataka dishes. It celebrates community, togetherness, and the rich culinary heritage of Karnataka.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <form id="regForm" onsubmit="return handleSubmit(event)">
+
+    <!-- 1. Personal Info -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-red">&#128100;</div>
+        <div class="section-title">Your Information</div>
+      </div>
+      <div class="row">
+        <div class="fg">
+          <label>First Name <span class="req">*</span></label>
+          <input type="text" id="fname" required placeholder="First name">
+        </div>
+        <div class="fg">
+          <label>Last Name <span class="req">*</span></label>
+          <input type="text" id="lname" required placeholder="Last name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="fg">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="email" required placeholder="your@email.com">
+        </div>
+        <div class="fg">
+          <label>Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" required placeholder="+1 (xxx) xxx-xxxx">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Event Selection -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-gold">&#127880;</div>
+        <div class="section-title">Select Events <span class="req">*</span></div>
+      </div>
+
+      <label class="event-check checked" onclick="toggleEvent(1)">
+        <input type="checkbox" id="event1" checked onchange="toggleEvent(1)">
+        <div class="event-check-info">
+          <div class="event-check-title">Day 1 &mdash; Yugadi Celebration (April 18)</div>
+          <div class="event-check-sub">Cultural program, dinner &amp; festivities at Oakland Mills High School</div>
+        </div>
+      </label>
+
+      <label class="event-check" onclick="toggleEvent(2)">
+        <input type="checkbox" id="event2" onchange="toggleEvent(2)">
+        <div class="event-check-info">
+          <div class="event-check-title">Day 2 &mdash; Badoota (April 19)</div>
+          <div class="event-check-sub">Traditional feast &amp; gathering &mdash; Venue TBD</div>
+        </div>
+      </label>
+    </div>
+
+    <!-- 3. Membership & Tickets -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-saffron">&#127915;</div>
+        <div class="section-title">Membership &amp; Tickets</div>
+      </div>
+
+      <!-- Membership Confirmation Checkbox -->
+      <label class="member-confirm" id="memberConfirmBox">
+        <input type="checkbox" id="isMember" onchange="handleMemberCheck()">
+        <div class="member-confirm-text">
+          <div class="member-confirm-title">I am a Sharavathi Kannada Balaga member</div>
+          <div class="member-confirm-sub">Check this box if you have an active SKB membership. Member pricing will be applied.</div>
+          <div id="memberBadge"></div>
+        </div>
+      </label>
+
+      <div id="memberIdBox" class="fg" style="display:none;">
+        <label>SKB Membership ID or Registered Email <span class="req">*</span></label>
+        <input type="text" id="memberId" placeholder="Enter your membership ID or email" oninput="validateMember()">
+        <div class="error-text" id="memberError">We couldn't find this ID in our records. Please check or contact us.</div>
+        <div id="memberValidationMsg" style="font-size:0.75rem;margin-top:0.15rem;"></div>
+      </div>
+
+      <!-- Pricing Display -->
+      <div id="pricingDisplay">
+        <div class="pricing-cards">
+          <div class="pcard" id="pcardDisplay">
+            <div class="pcard-tag" id="pcardTag">SELECT MEMBERSHIP ABOVE</div>
+            <div class="pcard-name" id="pcardName">Pricing</div>
+            <div id="pcardDay1">
+              <div class="pcard-day-label">Day 1 &mdash; Yugadi</div>
+              <div class="pcard-row"><span>Adult</span><span class="pcard-price" id="prDay1Adult">--</span></div>
+              <div class="pcard-row"><span>Kids (5&ndash;15)</span><span class="pcard-price" id="prDay1Kid">--</span></div>
+              <div class="pcard-row"><span>Under 5</span><span class="pcard-price">Free</span></div>
+            </div>
+            <div id="pcardDay2" style="display:none;margin-top:0.5rem;padding-top:0.4rem;border-top:1px solid var(--border);">
+              <div class="pcard-day-label">Day 2 &mdash; Badoota</div>
+              <div class="pcard-row"><span>Adult</span><span class="pcard-price" id="prDay2Adult">--</span></div>
+              <div class="pcard-row"><span>Kids (5&ndash;15)</span><span class="pcard-price" id="prDay2Kid">--</span></div>
+              <div class="pcard-row"><span>Under 5</span><span class="pcard-price">Free</span></div>
+            </div>
+            <div class="pcard-early" id="pcardEarly">Early Bird: 10% OFF</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counters -->
+      <div style="margin-top:0.6rem;">
+        <label>Number of Attendees <span class="req">*</span></label>
+        <div class="counters">
+          <div class="counter-group">
+            <label>Adults (16+)</label>
+            <div class="counter">
+              <button type="button" class="cbtn" onclick="adj('adults',-1)">&#8722;</button>
+              <span class="cval" id="vAdults">1</span>
+              <button type="button" class="cbtn" onclick="adj('adults',1)">+</button>
+            </div>
+          </div>
+          <div class="counter-group">
+            <label>Kids (5&ndash;15)</label>
+            <div class="counter">
+              <button type="button" class="cbtn" onclick="adj('kids',-1)">&#8722;</button>
+              <span class="cval" id="vKids">0</span>
+              <button type="button" class="cbtn" onclick="adj('kids',1)">+</button>
+            </div>
+          </div>
+          <div class="counter-group">
+            <label>Under 5 (Free)</label>
+            <div class="counter">
+              <button type="button" class="cbtn" onclick="adj('u5',-1)">&#8722;</button>
+              <span class="cval" id="vU5">0</span>
+              <button type="button" class="cbtn" onclick="adj('u5',1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="kidsBox" class="fg" style="display:none;margin-top:0.6rem;">
+        <label>Kids' Names &amp; Ages</label>
+        <textarea id="kidsInfo" placeholder="e.g., Aarav (8), Priya (12)"></textarea>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary" id="summaryBox" style="display:none;">
+        <div class="summary-title">Order Summary</div>
+        <div id="summaryContent"></div>
+      </div>
+    </div>
+
+    <!-- 4. Meal -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-green">&#127858;</div>
+        <div class="section-title">Meal Preferences</div>
+      </div>
+      <div class="fg">
+        <label>Food Preference <span class="req">*</span></label>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="meal" value="Vegetarian" checked><span class="pill-label">&#129385; Vegetarian</span></label>
+          <label class="pill"><input type="radio" name="meal" value="Non-Vegetarian"><span class="pill-label">&#127831; Non-Vegetarian</span></label>
+        </div>
+      </div>
+      <div class="fg" style="margin-top:0.5rem;">
+        <label>Dietary Restrictions / Allergies</label>
+        <input type="text" id="dietary" placeholder="e.g., Nut allergy, Gluten-free, Jain">
+      </div>
+    </div>
+
+    <!-- 5. Performance -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-gold">&#127926;</div>
+        <div class="section-title">Cultural Performance</div>
+      </div>
+      <div class="toggle-row">
+        <div>
+          <div style="font-weight:500;font-size:0.88rem;">Would you like to perform?</div>
+          <div style="font-size:0.75rem;color:var(--text-light);">Sign up for the Day 1 cultural program</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="perfToggle" onchange="togglePerf()">
+          <span class="toggle-track"></span>
+        </label>
+      </div>
+      <div class="perf-fields" id="perfFields">
+        <div class="fg">
+          <label>Performance Type <span class="req">*</span></label>
+          <div class="pills">
+            <label class="pill"><input type="radio" name="perfType" value="Group Song"><span class="pill-label">&#127908; Group Song</span></label>
+            <label class="pill"><input type="radio" name="perfType" value="Group Dance"><span class="pill-label">&#128131; Group Dance</span></label>
+            <label class="pill"><input type="radio" name="perfType" value="Ladies Fashion Show"><span class="pill-label">&#128087; Fashion Show</span></label>
+            <label class="pill"><input type="radio" name="perfType" value="Other"><span class="pill-label">&#127917; Other</span></label>
+          </div>
+        </div>
+        <div class="row" style="margin-top:0.5rem;">
+          <div class="fg">
+            <label>Duration</label>
+            <select id="perfDur">
+              <option value="">Select</option>
+              <option value="0-3 min">0&ndash;3 minutes</option>
+              <option value="3-5 min">3&ndash;5 minutes</option>
+              <option value="5+ min">5+ minutes</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Props Needed?</label>
+            <input type="text" id="perfProps" placeholder="Describe any props">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Payment -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-saffron">&#128179;</div>
+        <div class="section-title">Payment Method <span class="req">*</span></div>
+      </div>
+      <div class="pay-options">
+        <div class="pay-opt" onclick="pickPay('Zelle')">
+          <input type="radio" name="pay" value="Zelle">
+          <div class="pay-head">&#128178; Zelle</div>
+          <div class="pay-body">
+            <div class="pay-info"><span class="pay-info-label">Send to:</span><span>[ZELLE_EMAIL_OR_PHONE]</span></div>
+            <div class="pay-note">Include your full name as the memo.</div>
+            <div class="zelle-txn-row" id="zelleTxnRow">
+              <label>Zelle Transaction ID <span class="req">*</span></label>
+              <input type="text" id="zelleTxnId" placeholder="Enter Zelle transaction/confirmation ID" maxlength="50">
+              <div class="field-hint">Enter the transaction or confirmation ID from your Zelle payment.</div>
+            </div>
+          </div>
+        </div>
+        <div class="pay-opt" onclick="pickPay('Venmo')">
+          <input type="radio" name="pay" value="Venmo">
+          <div class="pay-head">&#128176; Venmo</div>
+          <div class="pay-body">
+            <div class="pay-info"><span class="pay-info-label">Handle:</span><span>[VENMO_HANDLE]</span></div>
+            <div class="pay-note">Include your name + "Yugadi 2026" in the note.</div>
+          </div>
+        </div>
+        <div class="pay-opt" onclick="pickPay('PayPal')">
+          <input type="radio" name="pay" value="PayPal">
+          <div class="pay-head">&#128179; PayPal</div>
+          <div class="pay-body">
+            <div class="pay-info"><span class="pay-info-label">PayPal:</span><span>[PAYPAL_EMAIL]</span></div>
+            <div class="pay-note">Send as "Friends &amp; Family" with your name.</div>
+          </div>
+        </div>
+        <div class="pay-opt" onclick="pickPay('Pay at Door')">
+          <input type="radio" name="pay" value="Pay at Door">
+          <div class="pay-head">&#127978; Pay at the Door</div>
+          <div class="pay-body">Cash &amp; cards accepted. <strong>Early bird discount does not apply</strong> for at-the-door payments.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Donation -->
+    <div class="form-section" style="border: 2px solid var(--gold); background: linear-gradient(135deg, #FFFDE7 0%, #FFF8E1 100%);">
+      <div class="section-head" style="border-bottom-color: var(--gold);">
+        <div class="section-icon" style="background: rgba(249,168,37,0.15);">&#128155;</div>
+        <div class="section-title" style="color: var(--saffron);">Sponsor Yugadi 2026</div>
+      </div>
+      <p style="font-size:0.82rem; color:var(--text-light); margin-bottom:0.8rem; line-height:1.55;">
+        Your generous donation helps Sharavathi Kannada Balaga bring the community together and keep our cultural traditions alive. Every contribution makes a difference!
+      </p>
+
+      <div class="toggle-row">
+        <div>
+          <div style="font-weight:500;font-size:0.88rem;">I would like to make a donation</div>
+          <div style="font-size:0.75rem;color:var(--text-light);">Optional — sponsor the Yugadi 2026 celebration</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="donateToggle" onchange="toggleDonation()">
+          <span class="toggle-track" style=""></span>
+        </label>
+      </div>
+
+      <div id="donationFields" style="display:none; margin-top:0.8rem;">
+        <div class="fg">
+          <label>Donation Amount ($) <span class="req">*</span></label>
+          <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.5rem;">
+            <button type="button" class="cbtn" style="width:auto;padding:0.4rem 0.9rem;font-size:0.82rem;border-radius:8px;" onclick="setDonation(25)">$25</button>
+            <button type="button" class="cbtn" style="width:auto;padding:0.4rem 0.9rem;font-size:0.82rem;border-radius:8px;" onclick="setDonation(50)">$50</button>
+            <button type="button" class="cbtn" style="width:auto;padding:0.4rem 0.9rem;font-size:0.82rem;border-radius:8px;" onclick="setDonation(100)">$100</button>
+            <button type="button" class="cbtn" style="width:auto;padding:0.4rem 0.9rem;font-size:0.82rem;border-radius:8px;" onclick="setDonation(200)">$200</button>
+            <button type="button" class="cbtn" style="width:auto;padding:0.4rem 0.9rem;font-size:0.82rem;border-radius:8px;" onclick="setDonation(500)">$500</button>
+          </div>
+          <input type="number" id="donationAmount" min="1" placeholder="Enter custom amount" style="max-width:200px;" oninput="updateDonationSummary()">
+        </div>
+        <div class="fg" style="margin-top:0.5rem;">
+          <label>Donor Display Name (optional)</label>
+          <input type="text" id="donorName" placeholder="Name to display in acknowledgment (or leave blank for anonymous)">
+        </div>
+        <div id="donationNote" style="display:none; margin-top:0.5rem; padding:0.6rem; background:rgba(46,125,50,0.06); border-radius:8px; font-size:0.82rem; color:var(--green); font-weight:500;">
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Additional -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-green">&#128221;</div>
+        <div class="section-title">Additional Information</div>
+      </div>
+      <div class="fg">
+        <label>Special Requests or Comments</label>
+        <textarea id="notes" placeholder="Anything else you'd like us to know?"></textarea>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="submit-area">
+      <button type="submit" class="btn-submit" id="submitBtn">
+        <span id="submitText">Register Now</span>
+        <span class="spinner" id="submitSpinner"></span>
+      </button>
+      <div class="footer-note">
+        By registering, you agree to receive event updates from Sharavathi Kannada Balaga.<br>
+        Questions? Call <strong>202-768-8161</strong> or email <a href="mailto:mail.president@sharavationline.org">mail.president@sharavationline.org</a><br>
+        <a href="https://www.sharavationline.org" target="_blank">www.sharavationline.org</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Confirmation Modal -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="modal-icon">&#10003;</div>
+    <h2>Registration Successful!</h2>
+    <p id="modalMsg"></p>
+    <button class="btn-done" onclick="closeModal()">Done</button>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// CONFIG - UPDATE THESE VALUES
+// ============================================================
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyKG3zan6YKEqufnT7lgz-FOto3nKaPwY6hlK03H-aobRBmziX3hV69z7-j57chB2s/exec';
+
+// Member list - will be populated from Excel later
+// Format: array of objects with name, email, memberId
+const MEMBER_LIST = [
+  // { name: 'John Doe', email: 'john@example.com', memberId: 'SKB001' },
+  // Add members here or load from external source
+];
+
+// ============================================================
+// STATE
+// ============================================================
+const S = { membership: 'non-member', adults: 1, kids: 0, u5: 0, pay: null, day1: true, day2: false, memberVerified: false };
+
+const PRICES = {
+  member:       { day1: { adult: 35, kid: 18 }, day2: { adult: 25, kid: 15 } },
+  'non-member': { day1: { adult: 42, kid: 20 }, day2: { adult: 32, kid: 18 } }
+};
+
+const EARLY_DEADLINE = new Date('2026-03-31T23:59:59');
+const earlyBird = () => new Date() <= EARLY_DEADLINE;
+
+// ============================================================
+// MEMBERSHIP
+// ============================================================
+function handleMemberCheck() {
+  const checked = document.getElementById('isMember').checked;
+  const box = document.getElementById('memberConfirmBox');
+  box.classList.toggle('checked', checked);
+  S.membership = checked ? 'member' : 'non-member';
+
+  document.getElementById('memberIdBox').style.display = checked ? 'block' : 'none';
+
+  if (!checked) {
+    S.memberVerified = false;
+    document.getElementById('memberId').value = '';
+    document.getElementById('memberBadge').innerHTML = '<span class="member-status-badge badge-notmember">Non-Member Pricing Applied</span>';
+    document.getElementById('memberValidationMsg').innerHTML = '';
+    document.getElementById('memberError').classList.remove('show');
+  } else {
+    document.getElementById('memberBadge').innerHTML = '';
+  }
+
+  updatePriceDisplay();
+  updateSummary();
+}
+
+function validateMember() {
+  const val = document.getElementById('memberId').value.trim().toLowerCase();
+  const badge = document.getElementById('memberBadge');
+  const msgEl = document.getElementById('memberValidationMsg');
+  const errEl = document.getElementById('memberError');
+
+  if (!val) {
+    badge.innerHTML = '';
+    msgEl.innerHTML = '';
+    errEl.classList.remove('show');
+    S.memberVerified = false;
+    return;
+  }
+
+  if (MEMBER_LIST.length === 0) {
+    // No member list loaded yet — accept provisionally
+    S.memberVerified = true;
+    badge.innerHTML = '<span class="member-status-badge badge-unverified">Membership will be verified</span>';
+    msgEl.innerHTML = '<span style="color:var(--saffron);">Your membership will be verified by the organizers.</span>';
+    errEl.classList.remove('show');
+    updatePriceDisplay();
+    updateSummary();
+    return;
+  }
+
+  // Check against member list
+  const found = MEMBER_LIST.find(m =>
+    m.email?.toLowerCase() === val ||
+    m.memberId?.toLowerCase() === val ||
+    m.name?.toLowerCase() === val
+  );
+
+  if (found) {
+    S.memberVerified = true;
+    badge.innerHTML = '<span class="member-status-badge badge-verified">&#10003; Verified Member</span>';
+    msgEl.innerHTML = '<span style="color:var(--green);">Welcome, ' + found.name + '! Member pricing applied.</span>';
+    errEl.classList.remove('show');
+  } else {
+    S.memberVerified = false;
+    badge.innerHTML = '<span class="member-status-badge badge-unverified">Not found in member list</span>';
+    msgEl.innerHTML = '';
+    errEl.classList.add('show');
+  }
+
+  updatePriceDisplay();
+  updateSummary();
+}
+
+function updatePriceDisplay() {
+  const p = PRICES[S.membership];
+  const tag = document.getElementById('pcardTag');
+  const name = document.getElementById('pcardName');
+  const card = document.getElementById('pcardDisplay');
+
+  if (S.membership === 'member') {
+    tag.textContent = 'SKB MEMBER';
+    tag.style.color = 'var(--red)';
+    name.textContent = 'Member Pricing';
+    card.style.borderColor = 'var(--red)';
+    card.style.background = 'rgba(183,28,28,0.03)';
+  } else {
+    tag.textContent = 'NON-MEMBER';
+    tag.style.color = 'var(--saffron)';
+    name.textContent = 'Standard Pricing';
+    card.style.borderColor = 'var(--border)';
+    card.style.background = '#fff';
+  }
+
+  document.getElementById('prDay1Adult').textContent = '$' + p.day1.adult;
+  document.getElementById('prDay1Kid').textContent = '$' + p.day1.kid;
+  document.getElementById('prDay2Adult').textContent = '$' + p.day2.adult;
+  document.getElementById('prDay2Kid').textContent = '$' + p.day2.kid;
+
+  document.getElementById('pcardDay1').style.display = S.day1 ? 'block' : 'none';
+  document.getElementById('pcardDay2').style.display = S.day2 ? 'block' : 'none';
+}
+
+// ============================================================
+// EVENTS
+// ============================================================
+function toggleEvent(day) {
+  const el = document.getElementById('event' + day);
+  if (day === 1) S.day1 = el.checked;
+  else S.day2 = el.checked;
+  el.closest('.event-check').classList.toggle('checked', el.checked);
+  updatePriceDisplay();
+  updateSummary();
+}
+
+// ============================================================
+// COUNTERS
+// ============================================================
+function adj(key, d) {
+  const min = key === 'adults' ? 1 : 0;
+  S[key] = Math.max(min, S[key] + d);
+  document.getElementById('v' + key.charAt(0).toUpperCase() + key.slice(1)).textContent = S[key];
+  document.getElementById('kidsBox').style.display = (S.kids + S.u5 > 0) ? 'block' : 'none';
+  updateSummary();
+}
+
+// ============================================================
+// SUMMARY
+// ============================================================
+function updateSummary() {
+  if (!S.day1 && !S.day2) { document.getElementById('summaryBox').style.display = 'none'; return; }
+
+  const p = PRICES[S.membership];
+  const eb = earlyBird() && S.pay !== 'Pay at Door';
+  let html = '', total = 0;
+
+  if (S.day1) {
+    html += '<div style="font-size:0.75rem;font-weight:600;color:var(--text-light);margin:0.2rem 0 0.1rem;text-transform:uppercase;letter-spacing:1px;">Day 1 — Yugadi</div>';
+    if (S.adults > 0) { const v = S.adults * p.day1.adult; total += v; html += sr(S.adults + ' x Adult', '$' + v.toFixed(2)); }
+    if (S.kids > 0) { const v = S.kids * p.day1.kid; total += v; html += sr(S.kids + ' x Kids (5\u201315)', '$' + v.toFixed(2)); }
+    if (S.u5 > 0) html += sr(S.u5 + ' x Under 5', 'Free');
+  }
+
+  if (S.day2) {
+    html += '<div style="font-size:0.75rem;font-weight:600;color:var(--text-light);margin:0.4rem 0 0.1rem;text-transform:uppercase;letter-spacing:1px;">Day 2 — Badoota</div>';
+    if (S.adults > 0) { const v = S.adults * p.day2.adult; total += v; html += sr(S.adults + ' x Adult', '$' + v.toFixed(2)); }
+    if (S.kids > 0) { const v = S.kids * p.day2.kid; total += v; html += sr(S.kids + ' x Kids (5\u201315)', '$' + v.toFixed(2)); }
+    if (S.u5 > 0) html += sr(S.u5 + ' x Under 5', 'Free');
+  }
+
+  let disc = 0;
+  if (eb) { disc = total * 0.10; html += '<div class="srow"><span>Early Bird (10%)</span><span class="discount">\u2212$' + disc.toFixed(2) + '</span></div>'; }
+
+  const donation = document.getElementById('donateToggle')?.checked ? (parseFloat(document.getElementById('donationAmount')?.value) || 0) : 0;
+  if (donation > 0) {
+    html += '<div class="srow"><span>&#128155; Donation (Yugadi 2026 Sponsor)</span><span style="color:var(--saffron);font-weight:600;">+$' + donation.toFixed(2) + '</span></div>';
+  }
+
+  const grandTotal = (total - disc) + donation;
+  html += '<div class="srow total"><span>Total</span><span>$' + grandTotal.toFixed(2) + '</span></div>';
+
+  document.getElementById('summaryContent').innerHTML = html;
+  document.getElementById('summaryBox').style.display = 'block';
+}
+
+function sr(l, r) { return '<div class="srow"><span>' + l + '</span><span>' + r + '</span></div>'; }
+
+// ============================================================
+// PAYMENT
+// ============================================================
+function pickPay(m) {
+  S.pay = m;
+  document.querySelectorAll('.pay-opt').forEach(el => {
+    const val = el.querySelector('input').value;
+    el.classList.toggle('active', val === m);
+    el.querySelector('input').checked = (val === m);
+  });
+  updateSummary();
+}
+
+// ============================================================
+// PERFORMANCE
+// ============================================================
+function togglePerf() {
+  document.getElementById('perfFields').classList.toggle('show', document.getElementById('perfToggle').checked);
+}
+
+// ============================================================
+// DONATION
+// ============================================================
+function toggleDonation() {
+  const show = document.getElementById('donateToggle').checked;
+  document.getElementById('donationFields').style.display = show ? 'block' : 'none';
+  if (!show) {
+    document.getElementById('donationAmount').value = '';
+    document.getElementById('donorName').value = '';
+    document.getElementById('donationNote').style.display = 'none';
+  }
+  updateSummary();
+}
+
+function setDonation(amt) {
+  document.getElementById('donationAmount').value = amt;
+  updateDonationSummary();
+  updateSummary();
+}
+
+function updateDonationSummary() {
+  const amt = parseFloat(document.getElementById('donationAmount').value) || 0;
+  const noteEl = document.getElementById('donationNote');
+  if (amt > 0) {
+    noteEl.innerHTML = '&#128155; Thank you! Your $' + amt.toFixed(2) + ' donation to sponsor Yugadi 2026 is greatly appreciated.';
+    noteEl.style.display = 'block';
+  } else {
+    noteEl.style.display = 'none';
+  }
+  updateSummary();
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+function showToast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + type + ' show';
+  setTimeout(() => t.classList.remove('show'), 4000);
+}
+
+// ============================================================
+// CALCULATE TOTAL
+// ============================================================
+function calcTotal() {
+  const p = PRICES[S.membership];
+  const eb = earlyBird() && S.pay !== 'Pay at Door';
+  let total = 0;
+  if (S.day1) total += S.adults * p.day1.adult + S.kids * p.day1.kid;
+  if (S.day2) total += S.adults * p.day2.adult + S.kids * p.day2.kid;
+  if (eb) total *= 0.90;
+  const donation = document.getElementById('donateToggle')?.checked ? (parseFloat(document.getElementById('donationAmount')?.value) || 0) : 0;
+  return total + donation;
+}
+
+// ============================================================
+// SUBMIT
+// ============================================================
+function handleSubmit(e) {
+  e.preventDefault();
+
+  // Validate
+  if (!S.day1 && !S.day2) { showToast('Please select at least one event.', 'error'); return false; }
+  if (!S.pay) { showToast('Please select a payment method.', 'error'); return false; }
+  if (S.pay === 'Zelle' && !document.getElementById('zelleTxnId').value.trim()) {
+    showToast('Please enter your Zelle transaction ID.', 'error'); return false;
+  }
+
+  const fn = document.getElementById('fname').value.trim();
+  const ln = document.getElementById('lname').value.trim();
+  const em = document.getElementById('email').value.trim();
+  const ph = document.getElementById('phone').value.trim();
+
+  if (!fn || !ln || !em || !ph) { showToast('Please fill in all required fields.', 'error'); return false; }
+
+  if (S.membership === 'member' && !document.getElementById('memberId').value.trim()) {
+    showToast('Please enter your membership ID or email.', 'error'); return false;
+  }
+
+  const total = calcTotal();
+
+  const events = [];
+  if (S.day1) events.push('Yugadi (April 18)');
+  if (S.day2) events.push('Badoota (April 19)');
+
+  const meal = document.querySelector('input[name="meal"]:checked')?.value || '';
+  const performing = document.getElementById('perfToggle').checked;
+  const perfType = performing ? (document.querySelector('input[name="perfType"]:checked')?.value || '') : '';
+
+  // Build data object
+  const data = {
+    timestamp: new Date().toISOString(),
+    firstName: fn,
+    lastName: ln,
+    email: em,
+    phone: ph,
+    events: events.join(', '),
+    membership: S.membership === 'member' ? 'Member' : 'Non-Member',
+    memberId: document.getElementById('memberId').value.trim(),
+    memberVerified: S.memberVerified ? 'Yes' : 'Pending',
+    adults: S.adults,
+    kids: S.kids,
+    under5: S.u5,
+    kidsDetails: document.getElementById('kidsInfo')?.value.trim() || '',
+    mealPreference: meal,
+    dietary: document.getElementById('dietary').value.trim(),
+    performing: performing ? 'Yes' : 'No',
+    perfType: perfType,
+    perfDuration: performing ? document.getElementById('perfDur').value : '',
+    perfProps: performing ? document.getElementById('perfProps').value.trim() : '',
+    paymentMethod: S.pay,
+    zelleTxnId: S.pay === 'Zelle' ? document.getElementById('zelleTxnId').value.trim() : '',
+    total: '$' + total.toFixed(2),
+    specialRequests: document.getElementById('notes').value.trim(),
+    donationAmount: document.getElementById('donateToggle')?.checked ? (document.getElementById('donationAmount').value || '0') : '0',
+    donorName: document.getElementById('donateToggle')?.checked ? (document.getElementById('donorName').value.trim() || 'Anonymous') : ''
+  };
+
+  // Show loading
+  const btn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('submitText');
+  const spinner = document.getElementById('submitSpinner');
+  btn.disabled = true;
+  btnText.textContent = 'Submitting...';
+  spinner.classList.add('show');
+
+  // Send to Google Sheets
+  if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+    // Use URLSearchParams - this sends as application/x-www-form-urlencoded
+    // which works with no-cors and Google Apps Script reads it via e.parameter
+    const params = new URLSearchParams();
+    Object.keys(data).forEach(key => {
+      params.append(key, typeof data[key] === 'object' ? JSON.stringify(data[key]) : String(data[key]));
+    });
+
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: params
+    }).then(() => {
+      showSuccess(fn, ln, em, events, total);
+    }).catch(err => {
+      console.error('Submit error:', err);
+      showToast('Submission error. Please try again.', 'error');
+    }).finally(() => {
+      btn.disabled = false;
+      btnText.textContent = 'Register Now';
+      spinner.classList.remove('show');
+    });
+  } else {
+    setTimeout(() => {
+      showSuccess(fn, ln, em, events, total);
+      btn.disabled = false;
+      btnText.textContent = 'Register Now';
+      spinner.classList.remove('show');
+      console.log('Registration Data:', JSON.stringify(data, null, 2));
+    }, 800);
+  }
+
+  return false;
+}
+
+function showSuccess(fn, ln, em, events, total) {
+  const eb = earlyBird() && S.pay !== 'Pay at Door';
+  document.getElementById('modalMsg').innerHTML =
+    'Thank you, <strong>' + fn + ' ' + ln + '</strong>!<br>' +
+    'Events: <strong>' + events.join(' &amp; ') + '</strong><br>' +
+    'Total: <strong>$' + total.toFixed(2) + '</strong>' + (eb ? ' <span style="color:var(--green)">(incl. early bird)</span>' : '') + '<br><br>' +
+    (S.pay === 'Pay at Door'
+      ? 'Please bring payment to the venue.'
+      : 'Please complete payment via <strong>' + S.pay + '</strong> at your earliest convenience.') +
+    '<br><br>Confirmation will be sent to <strong>' + em + '</strong>.';
+  document.getElementById('modalBg').classList.add('show');
+}
+
+function closeModal() {
+  document.getElementById('modalBg').classList.remove('show');
+  resetForm();
+}
+
+function resetForm() {
+  // Reset state
+  S.membership = 'non-member'; S.adults = 1; S.kids = 0; S.u5 = 0;
+  S.pay = null; S.day1 = true; S.day2 = false; S.memberVerified = false;
+
+  // Reset text inputs
+  document.getElementById('fname').value = '';
+  document.getElementById('lname').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('phone').value = '';
+  document.getElementById('memberId').value = '';
+  document.getElementById('dietary').value = '';
+  document.getElementById('notes').value = '';
+  document.getElementById('zelleTxnId').value = '';
+  if (document.getElementById('kidsInfo')) document.getElementById('kidsInfo').value = '';
+  if (document.getElementById('perfDur')) document.getElementById('perfDur').value = '';
+  if (document.getElementById('perfProps')) document.getElementById('perfProps').value = '';
+
+  // Reset event checkboxes
+  const day1cb = document.getElementById('day1');
+  const day2cb = document.getElementById('day2');
+  if (day1cb) { day1cb.checked = true; }
+  if (day2cb) { day2cb.checked = false; }
+
+  // Reset membership radio
+  document.querySelectorAll('input[name="membership"]').forEach(r => {
+    r.checked = (r.value === 'non-member');
+  });
+  const memberFields = document.getElementById('memberFields');
+  if (memberFields) memberFields.style.display = 'none';
+
+  // Reset count displays
+  document.getElementById('adultCount').textContent = '1';
+  document.getElementById('kidCount').textContent = '0';
+  document.getElementById('u5Count').textContent = '0';
+
+  // Reset meal preference
+  document.querySelectorAll('input[name="meal"]').forEach(r => r.checked = false);
+
+  // Reset payment selection
+  document.querySelectorAll('.pay-opt').forEach(el => {
+    el.classList.remove('active');
+    el.querySelector('input').checked = false;
+  });
+
+  // Reset performance toggle
+  const perfToggle = document.getElementById('perfToggle');
+  if (perfToggle) { perfToggle.checked = false; togglePerf(); }
+  document.querySelectorAll('input[name="perfType"]').forEach(r => r.checked = false);
+
+  // Reset donation
+  const donateToggle = document.getElementById('donateToggle');
+  if (donateToggle) { donateToggle.checked = false; toggleDonation(); }
+  if (document.getElementById('donationAmount')) document.getElementById('donationAmount').value = '';
+  if (document.getElementById('donorName')) document.getElementById('donorName').value = '';
+
+  // Update summary
+  updateSummary();
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ============================================================
+// MOBILE TOUCH FIX
+// ============================================================
+(function() {
+  // Fix payment option taps on mobile
+  // Skip if user is tapping on a text input, label, or inside the zelle txn row
+  document.querySelectorAll('.pay-opt').forEach(function(el) {
+    el.addEventListener('touchend', function(e) {
+      var tag = e.target.tagName.toLowerCase();
+      // Let text inputs, textareas, selects, and labels work normally
+      if (tag === 'input' && e.target.type !== 'radio') return;
+      if (tag === 'textarea' || tag === 'select') return;
+      // Let taps inside zelle-txn-row pass through
+      if (e.target.closest && e.target.closest('.zelle-txn-row')) return;
+      e.preventDefault();
+      var val = el.querySelector('input[type="radio"]').value;
+      pickPay(val);
+    }, { passive: false });
+  });
+
+  // Fix counter buttons on mobile
+  document.querySelectorAll('.cbtn').forEach(function(btn) {
+    btn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      btn.click();
+    }, { passive: false });
+  });
+
+  // Fix event checkboxes on mobile
+  document.querySelectorAll('.event-check').forEach(function(el) {
+    el.addEventListener('touchend', function(e) {
+      if (e.target.tagName === 'INPUT') return;
+      e.preventDefault();
+      var cb = el.querySelector('input[type="checkbox"]');
+      cb.checked = !cb.checked;
+      var day = cb.id === 'day1' ? 1 : 2;
+      toggleEvent(day);
+    }, { passive: false });
+  });
+
+  // Fix pricing card taps on mobile
+  document.querySelectorAll('.pcard').forEach(function(el) {
+    el.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      el.click();
+    }, { passive: false });
+  });
+
+  // Fix pill (radio button) taps on mobile
+  document.querySelectorAll('.pill-label').forEach(function(el) {
+    el.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      var radio = el.previousElementSibling;
+      if (radio && radio.type === 'radio') {
+        radio.checked = true;
+        radio.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    }, { passive: false });
+  });
+
+  // Fix donation preset buttons on mobile
+  document.querySelectorAll('[onclick^="setDonation"]').forEach(function(btn) {
+    btn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      btn.click();
+    }, { passive: false });
+  });
+})();
+
+// ============================================================
+// INIT
+// ============================================================
+if (!earlyBird()) {
+  document.getElementById('earlyBirdBanner').style.display = 'none';
+  document.getElementById('pcardEarly').style.display = 'none';
+}
+
+// Set initial non-member badge
+document.getElementById('memberBadge').innerHTML = '<span class="member-status-badge badge-notmember">Non-Member Pricing Applied</span>';
+updatePriceDisplay();
+</script>
+
+</body>
+</html>

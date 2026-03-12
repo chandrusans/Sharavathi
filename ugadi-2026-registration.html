@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yugadi 2026 - Registration | Sharavathi Kannada Balaga</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --red: #b71c1c;
+    --red-dark: #7f0000;
+    --saffron: #FF6F00;
+    --gold: #F9A825;
+    --turmeric: #FDD835;
+    --green: #2E7D32;
+    --green-light: #43A047;
+    --mango: #8BC34A;
+    --cream: #FFF8E1;
+    --bg: #FFFDE7;
+    --card: #FFFFFF;
+    --text: #3E2723;
+    --text-light: #795548;
+    --border: #E8D5B7;
+    --kolam: rgba(183,28,28,0.06);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* === Decorative Mango Leaf Border === */
+  .mango-border {
+    height: 32px;
+    background: linear-gradient(135deg, var(--green) 25%, var(--mango) 25%, var(--mango) 50%, var(--green) 50%, var(--green) 75%, var(--mango) 75%);
+    background-size: 40px 40px;
+    position: relative;
+  }
+
+  .mango-border::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold), var(--turmeric), var(--gold), var(--saffron));
+  }
+
+  /* === Header === */
+  .header {
+    background: linear-gradient(160deg, var(--red) 0%, var(--red-dark) 60%, #4A0000 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem 2.2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 85%, rgba(249,168,37,0.15) 0%, transparent 40%),
+      radial-gradient(circle at 85% 15%, rgba(249,168,37,0.1) 0%, transparent 35%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 0 L42 38 L80 40 L42 42 L40 80 L38 42 L0 40 L38 38Z' fill='%23ffffff' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  .header-content { position: relative; z-index: 1; }
+
+  .rangoli-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0.3rem 0 0.6rem;
+    font-size: 1.2rem;
+    opacity: 0.7;
+  }
+
+  .rangoli-divider .dot {
+    width: 5px; height: 5px;
+    background: var(--turmeric);
+    border-radius: 50%;
+  }
+
+  .header-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.3);
+    margin: 0 auto 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+
+  .org-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .org-kannada {
+    font-size: 1rem;
+    opacity: 0.75;
+    margin-bottom: 0.3rem;
+  }
+
+  .event-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    background: linear-gradient(180deg, #FFFFFF 30%, var(--turmeric) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .event-year {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    opacity: 0.7;
+    margin-bottom: 0.3rem;
+  }
+
+  .event-tagline {
+    font-size: 0.95rem;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 1rem;
+  }
+
+  .event-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 400;
+  }
+
+  /* === Early Bird === */
+  .early-bird {
+    background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
+    background-size: 200% 100%;
+    animation: earlyShimmer 3s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  @keyframes earlyShimmer {
+    0%,100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* === Two-Day Event Cards === */
+  .event-days {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .day-card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .day-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+
+  .day-card.day1::before { background: linear-gradient(90deg, var(--red), var(--saffron)); }
+  .day-card.day2::before { background: linear-gradient(90deg, var(--green), var(--mango)); }
+
+  .day-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+  }
+
+  .day-card.day1 .day-label { color: var(--red); }
+  .day-card.day2 .day-label { color: var(--green); }
+
+  .day-event-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.1rem;
+  }
+
+  .day-event-kannada {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .day-detail {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-bottom: 0.15rem;
+  }
+
+  /* === Container === */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  /* === Form Sections === */
+  .form-section {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+    position: relative;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px solid var(--cream);
+  }
+
+  .section-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .si-red { background: rgba(183,28,28,0.08); }
+  .si-gold { background: rgba(249,168,37,0.12); }
+  .si-green { background: rgba(46,125,50,0.08); }
+  .si-saffron { background: rgba(255,111,0,0.08); }
+
+  .section-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--red);
+  }
+
+  /* === Form Elements === */
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-bottom: 0.9rem; }
+  .row.single { grid-template-columns: 1fr; }
+
+  .fg { margin-bottom: 0.9rem; }
+  .fg:last-child { margin-bottom: 0; }
+
+  label { display: block; font-size: 0.83rem; font-weight: 500; margin-bottom: 0.3rem; }
+  .req { color: var(--red); }
+
+  input[type="text"],input[type="email"],input[type="tel"],input[type="number"],select,textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    color: var(--text);
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  input:focus,select:focus,textarea:focus {
+    outline: none;
+    border-color: var(--saffron);
+    box-shadow: 0 0 0 3px rgba(255,111,0,0.1);
+  }
+
+  textarea { resize: vertical; min-height: 60px; }
+
+  /* Radio pills */
+  .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+
+  .pill { position: relative; cursor: pointer; }
+  .pill input { position: absolute; opacity: 0; }
+
+  .pill-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.83rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #fff;
+  }
+
+  .pill input:checked + .pill-label {
+    border-color: var(--red);
+    background: rgba(183,28,28,0.05);
+    color: var(--red);
+    font-weight: 600;
+  }
+
+  .pill-label:hover { border-color: var(--saffron); }
+
+  /* === Pricing Cards === */
+  .pricing-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 0.6rem 0 1rem; }
+
+  .pcard {
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+    background: #fff;
+  }
+
+  .pcard:hover { border-color: var(--saffron); transform: translateY(-1px); }
+
+  .pcard.active { border-color: var(--red); background: rgba(183,28,28,0.03); }
+  .pcard.active::after {
+    content: '\2713';
+    position: absolute;
+    top: 8px; right: 10px;
+    background: var(--red);
+    color: white;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pcard input { position: absolute; opacity: 0; }
+
+  .pcard-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.4rem;
+  }
+
+  .pcard.member-card .pcard-tag { color: var(--red); }
+  .pcard.nonmember-card .pcard-tag { color: var(--saffron); }
+
+  .pcard-name { font-size: 1rem; font-weight: 600; margin-bottom: 0.6rem; }
+
+  .pcard-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    padding: 0.2rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.07);
+  }
+
+  .pcard-row:last-of-type { border: none; }
+
+  .pcard-price { font-weight: 600; color: var(--red); }
+
+  .pcard-early {
+    margin-top: 0.5rem;
+    font-size: 0.72rem;
+    color: var(--green);
+    font-weight: 600;
+    background: rgba(46,125,50,0.06);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  /* === Counters === */
+  .counters { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 0.5rem; }
+
+  .counter-group label { font-size: 0.78rem; color: var(--text-light); margin-bottom: 0.25rem; }
+
+  .counter {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .cbtn {
+    width: 32px; height: 32px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    font-weight: 700;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+
+  .cbtn:hover { border-color: var(--red); color: var(--red); }
+
+  .cval { font-size: 1.05rem; font-weight: 700; min-width: 24px; text-align: center; }
+
+  /* === Event Selection Checkboxes === */
+  /* === About Section === */
+  .about-section {
+    background: var(--card);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; }
+
+  .about-card {
+    padding: 1.4rem;
+    position: relative;
+  }
+
+  .about-card:first-child { border-right: 1px solid var(--border); }
+
+  .about-card .about-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+  }
+
+  .about-card.about-yugadi .about-tag { color: var(--red); }
+  .about-card.about-badoota .about-tag { color: var(--green); }
+
+  .about-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+    color: var(--text);
+  }
+
+  .about-card .about-kannada {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .about-card p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 600px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-card:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+  }
+
+  .event-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.8rem;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .event-check:hover { border-color: var(--saffron); }
+  .event-check.checked { border-color: var(--red); background: rgba(183,28,28,0.03); }
+
+  .event-check input[type="checkbox"] {
+    width: 18px; height: 18px;
+    margin-top: 2px;
+    accent-color: var(--red);
+    flex-shrink: 0;
+  }
+
+  .event-check-info { flex: 1; }
+  .event-check-title { font-weight: 600; font-size: 0.9rem; }
+  .event-check-sub { font-size: 0.78rem; color: var(--text-light); }
+
+  /* === Summary === */
+  .summary {
+    background: var(--cream);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .summary-title { font-weight: 700; font-size: 0.92rem; margin-bottom: 0.5rem; }
+
+  .srow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    font-size: 0.85rem;
+  }
+
+  .srow.total {
+    border-top: 2px solid var(--border);
+    margin-top: 0.4rem;
+    padding-top: 0.6rem;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--red);
+  }
+
+  .discount { color: var(--green); font-weight: 600; }
+
+  /* === Payment === */
+  .pay-options { display: grid; gap: 0.6rem; margin-top: 0.4rem; }
+
+  .pay-opt {
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .pay-opt:hover { border-color: var(--saffron); }
+  .pay-opt.active { border-color: var(--red); background: rgba(183,28,28,0.03); }
+
+  .pay-opt input { position: absolute; opacity: 0; }
+
+  .pay-head { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.92rem; }
+
+  .pay-body {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--border);
+    font-size: 0.82rem;
+    color: var(--text-light);
+    display: none;
+  }
+
+  .pay-opt.active .pay-body { display: block; }
+
+  .pay-info { display: flex; justify-content: space-between; padding: 0.15rem 0; }
+  .pay-info-label { font-weight: 500; color: var(--text); }
+  .pay-note { margin-top: 0.3rem; font-size: 0.78rem; color: var(--saffron); font-weight: 500; }
+
+  /* === Toggle === */
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 0.3rem 0; }
+
+  .toggle { position: relative; width: 46px; height: 24px; flex-shrink: 0; }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .toggle-track {
+    position: absolute; inset: 0; background: #ccc; border-radius: 24px; cursor: pointer; transition: 0.3s;
+  }
+  .toggle-track::before {
+    content: ''; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px;
+    background: #fff; border-radius: 50%; transition: 0.3s;
+  }
+  .toggle input:checked + .toggle-track { background: var(--red); }
+  .toggle input:checked + .toggle-track::before { transform: translateX(22px); }
+
+  .perf-fields { display: none; margin-top: 0.8rem; }
+  .perf-fields.show { display: block; }
+
+  /* === Submit === */
+  .submit-area { text-align: center; margin-top: 1.5rem; }
+
+  .btn-submit {
+    background: linear-gradient(135deg, var(--red), var(--red-dark));
+    color: white;
+    border: none;
+    padding: 0.85rem 3rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 18px rgba(183,28,28,0.3);
+    letter-spacing: 0.3px;
+  }
+
+  .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(183,28,28,0.4); }
+
+  .footer-note {
+    text-align: center;
+    margin-top: 0.8rem;
+    font-size: 0.76rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  .footer-note a { color: var(--red); text-decoration: none; }
+
+  /* === Confirmation Modal === */
+  .modal-bg {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+    z-index: 1000; align-items: center; justify-content: center;
+  }
+  .modal-bg.show { display: flex; }
+
+  .modal {
+    background: #fff; border-radius: 16px; padding: 2.2rem; max-width: 460px; width: 90%;
+    text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  }
+
+  .modal-icon {
+    width: 60px; height: 60px; background: var(--green); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 0.8rem; font-size: 1.8rem; color: white;
+  }
+
+  .modal h2 { font-size: 1.3rem; margin-bottom: 0.4rem; color: var(--text); }
+  .modal p { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+
+  .btn-done {
+    margin-top: 1rem;
+    background: var(--red); color: white; border: none;
+    padding: 0.55rem 2rem; border-radius: 8px;
+    font-family: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer;
+  }
+
+  /* === Responsive === */
+  @media (max-width: 600px) {
+    .event-title { font-size: 2.2rem; }
+    .event-badges { flex-direction: column; align-items: center; }
+    .row, .pricing-cards, .event-days { grid-template-columns: 1fr; }
+    .form-section { padding: 1.1rem; }
+    .counters { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Mango Leaf Border -->
+<div class="mango-border"></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-content">
+    <img src="https://www.sharavationline.org/wp-content/uploads/2023/09/logo-120x120-1.png" alt="Sharavathi Kannada Balaga Logo" class="header-logo">
+    <div class="org-name">Sharavathi Kannada Balaga</div>
+    <div class="org-kannada">ಶರಾವತಿ ಕನ್ನಡ ಬಳಗ</div>
+    <div class="rangoli-divider">
+      <span class="dot"></span><span>&#10043;</span><span class="dot"></span><span>&#10043;</span><span class="dot"></span>
+    </div>
+    <h1 class="event-title">&#127808; Yugadi 2026 &#127808;</h1>
+    <div class="event-year">&mdash; ಹೊಸ ವರ್ಷ &mdash;</div>
+    <p class="event-tagline">Kannada New Year Celebration &amp; Cultural Extravaganza</p>
+    <div class="event-badges">
+      <span class="badge">&#128197; April 18 &amp; 19, 2026</span>
+      <span class="badge">&#128205; Columbia, Maryland</span>
+      <span class="badge">&#128222; 202-768-8161</span>
+    </div>
+  </div>
+</header>
+
+<!-- Early Bird -->
+<div class="early-bird" id="earlyBirdBanner">
+  &#127881; Early Bird: 10% OFF all tickets — Register by March 31, 2026! &#127881;
+</div>
+
+<!-- Form -->
+<div class="container">
+
+  <!-- Two Day Overview -->
+  <div class="event-days">
+    <div class="day-card day1">
+      <div class="day-label">Day 1 — Saturday</div>
+      <div class="day-event-name">Yugadi Celebration</div>
+      <div class="day-event-kannada">ಯುಗಾದಿ ಹಬ್ಬ</div>
+      <div class="day-detail">&#128197; April 18, 2026</div>
+      <div class="day-detail">&#128205; Oakland Mills High School</div>
+      <div class="day-detail" style="font-size:0.72rem;">9410 Kilimanjaro Rd, Columbia, MD 21045</div>
+    </div>
+    <div class="day-card day2">
+      <div class="day-label">Day 2 — Sunday</div>
+      <div class="day-event-name">Badoota</div>
+      <div class="day-event-kannada">&#3244;&#3262;&#3233;&#3266;&#3219;</div>
+      <div class="day-detail">&#128197; April 19, 2026</div>
+      <div class="day-detail">&#128205; Venue TBD</div>
+      <div class="day-detail" style="font-size:0.72rem;">Details to be announced</div>
+    </div>
+  </div>
+
+  <!-- About the Events -->
+  <div class="about-section">
+    <div class="about-grid">
+      <div class="about-card about-yugadi">
+        <div class="about-tag">About the Festival</div>
+        <h3>Yugadi / Ugadi</h3>
+        <div class="about-kannada">ಯುಗಾದಿ ಹಬ್ಬ &bull; ಹೊಸ ವರ್ಷ</div>
+        <p>Yugadi marks the beginning of the new year in the Hindu lunisolar calendar, celebrated with great fervor across Karnataka. The festival heralds the arrival of spring and new beginnings. Families gather to savor the iconic <em>Bevu-Bella</em> (a mix of neem and jaggery), symbolizing life's blend of bitter and sweet experiences. The day features Panchanga Shravana (reading of the new almanac), rangoli, cultural performances, and a grand festive feast.</p>
+      </div>
+      <div class="about-card about-badoota">
+        <div class="about-tag">Day 2 Tradition</div>
+        <h3>Badoota</h3>
+        <div class="about-kannada">&#3244;&#3262;&#3233;&#3266;&#3219;</div>
+        <p>Badoota (also known as Non-Veg feast day) is a beloved tradition observed the day after Yugadi in many Karnataka households. After the sacred vegetarian observance of Yugadi, families and friends come together for a hearty non-vegetarian feast featuring classic Karnataka dishes. It is a joyful, informal gathering that celebrates community, togetherness, and the rich culinary heritage of Karnataka.</p>
+      </div>
+    </div>
+  </div>
+
+  <form id="regForm" onsubmit="return handleSubmit(event)">
+
+    <!-- 1. Personal Info -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-red">&#128100;</div>
+        <div class="section-title">Your Information</div>
+      </div>
+      <div class="row">
+        <div class="fg">
+          <label>First Name <span class="req">*</span></label>
+          <input type="text" id="fname" required placeholder="First name">
+        </div>
+        <div class="fg">
+          <label>Last Name <span class="req">*</span></label>
+          <input type="text" id="lname" required placeholder="Last name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="fg">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="email" required placeholder="your@email.com">
+        </div>
+        <div class="fg">
+          <label>Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" required placeholder="+1 (xxx) xxx-xxxx">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Event Selection -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-gold">&#127880;</div>
+        <div class="section-title">Select Events <span class="req">*</span></div>
+      </div>
+
+      <label class="event-check checked" id="ev1Check" onclick="toggleEvent(1)">
+        <input type="checkbox" id="event1" checked onchange="toggleEvent(1)">
+        <div class="event-check-info">
+          <div class="event-check-title">Day 1 — Yugadi Celebration (April 18)</div>
+          <div class="event-check-sub">Cultural program, dinner &amp; festivities at Oakland Mills High School</div>
+        </div>
+      </label>
+
+      <label class="event-check" id="ev2Check" onclick="toggleEvent(2)">
+        <input type="checkbox" id="event2" onchange="toggleEvent(2)">
+        <div class="event-check-info">
+          <div class="event-check-title">Day 2 — Badoota (April 19)</div>
+          <div class="event-check-sub">Traditional feast &amp; gathering — Venue TBD</div>
+        </div>
+      </label>
+    </div>
+
+    <!-- 3. Membership & Tickets -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-saffron">&#127915;</div>
+        <div class="section-title">Membership &amp; Tickets</div>
+      </div>
+
+      <label>SKB Membership Status <span class="req">*</span></label>
+      <div class="pricing-cards">
+        <div class="pcard member-card" id="mcardMember" onclick="pickMembership('member')">
+          <input type="radio" name="membership" value="member">
+          <div class="pcard-tag">SKB Member</div>
+          <div class="pcard-name">Member Pricing</div>
+          <div id="memberPricesDay1">
+            <div style="font-size:0.7rem;font-weight:600;color:var(--text-light);margin-bottom:0.2rem;text-transform:uppercase;letter-spacing:1px;">Day 1 — Yugadi</div>
+            <div class="pcard-row"><span>Adult</span><span class="pcard-price">$35</span></div>
+            <div class="pcard-row"><span>Kids (5–15)</span><span class="pcard-price">$18</span></div>
+            <div class="pcard-row"><span>Under 5</span><span class="pcard-price">Free</span></div>
+          </div>
+          <div id="memberPricesDay2" style="display:none;margin-top:0.6rem;padding-top:0.5rem;border-top:1px solid var(--border);">
+            <div style="font-size:0.7rem;font-weight:600;color:var(--text-light);margin-bottom:0.2rem;text-transform:uppercase;letter-spacing:1px;">Day 2 — Badoota</div>
+            <div class="pcard-row"><span>Adult</span><span class="pcard-price">$25</span></div>
+            <div class="pcard-row"><span>Kids (5–15)</span><span class="pcard-price">$15</span></div>
+            <div class="pcard-row"><span>Under 5</span><span class="pcard-price">Free</span></div>
+          </div>
+          <div class="pcard-early" id="memberEarly">Early Bird: 10% OFF</div>
+        </div>
+        <div class="pcard nonmember-card" id="mcardNon" onclick="pickMembership('non-member')">
+          <input type="radio" name="membership" value="non-member">
+          <div class="pcard-tag">Non-Member</div>
+          <div class="pcard-name">Standard Pricing</div>
+          <div id="nonMemberPricesDay1">
+            <div style="font-size:0.7rem;font-weight:600;color:var(--text-light);margin-bottom:0.2rem;text-transform:uppercase;letter-spacing:1px;">Day 1 — Yugadi</div>
+            <div class="pcard-row"><span>Adult</span><span class="pcard-price">$42</span></div>
+            <div class="pcard-row"><span>Kids (5–15)</span><span class="pcard-price">$20</span></div>
+            <div class="pcard-row"><span>Under 5</span><span class="pcard-price">Free</span></div>
+          </div>
+          <div id="nonMemberPricesDay2" style="display:none;margin-top:0.6rem;padding-top:0.5rem;border-top:1px solid var(--border);">
+            <div style="font-size:0.7rem;font-weight:600;color:var(--text-light);margin-bottom:0.2rem;text-transform:uppercase;letter-spacing:1px;">Day 2 — Badoota</div>
+            <div class="pcard-row"><span>Adult</span><span class="pcard-price">$32</span></div>
+            <div class="pcard-row"><span>Kids (5–15)</span><span class="pcard-price">$18</span></div>
+            <div class="pcard-row"><span>Under 5</span><span class="pcard-price">Free</span></div>
+          </div>
+          <div class="pcard-early" id="nonMemberEarly">Early Bird: 10% OFF</div>
+        </div>
+      </div>
+
+      <div id="memberIdBox" class="fg" style="display:none;">
+        <label>SKB Membership ID</label>
+        <input type="text" id="memberId" placeholder="Your membership ID">
+      </div>
+
+      <!-- Counters -->
+      <div style="margin-top:0.8rem;">
+        <label>Number of Attendees <span class="req">*</span></label>
+        <div class="counters">
+          <div class="counter-group">
+            <label>Adults (16+)</label>
+            <div class="counter">
+              <button type="button" class="cbtn" onclick="adj('adults',-1)">&#8722;</button>
+              <span class="cval" id="vAdults">1</span>
+              <button type="button" class="cbtn" onclick="adj('adults',1)">+</button>
+            </div>
+          </div>
+          <div class="counter-group">
+            <label>Kids (5–15)</label>
+            <div class="counter">
+              <button type="button" class="cbtn" onclick="adj('kids',-1)">&#8722;</button>
+              <span class="cval" id="vKids">0</span>
+              <button type="button" class="cbtn" onclick="adj('kids',1)">+</button>
+            </div>
+          </div>
+          <div class="counter-group">
+            <label>Under 5 (Free)</label>
+            <div class="counter">
+              <button type="button" class="cbtn" onclick="adj('u5',-1)">&#8722;</button>
+              <span class="cval" id="vU5">0</span>
+              <button type="button" class="cbtn" onclick="adj('u5',1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="kidsBox" class="fg" style="display:none;margin-top:0.8rem;">
+        <label>Kids' Names &amp; Ages</label>
+        <textarea id="kidsInfo" placeholder="e.g., Aarav (8), Priya (12)"></textarea>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary" id="summaryBox" style="display:none;">
+        <div class="summary-title">Order Summary</div>
+        <div id="summaryContent"></div>
+      </div>
+    </div>
+
+    <!-- 4. Meal Preferences -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-green">&#127858;</div>
+        <div class="section-title">Meal Preferences</div>
+      </div>
+      <div class="fg">
+        <label>Food Preference <span class="req">*</span></label>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="meal" value="veg" checked><span class="pill-label">&#129385; Vegetarian</span></label>
+          <label class="pill"><input type="radio" name="meal" value="nonveg"><span class="pill-label">&#127831; Non-Vegetarian</span></label>
+        </div>
+      </div>
+      <div class="fg" style="margin-top:0.6rem;">
+        <label>Dietary Restrictions / Allergies</label>
+        <input type="text" id="dietary" placeholder="e.g., Nut allergy, Gluten-free, Jain">
+      </div>
+    </div>
+
+    <!-- 5. Performance -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-gold">&#127926;</div>
+        <div class="section-title">Cultural Performance</div>
+      </div>
+      <div class="toggle-row">
+        <div>
+          <div style="font-weight:500;font-size:0.92rem;">Would you like to perform?</div>
+          <div style="font-size:0.78rem;color:var(--text-light);">Sign up for the Day 1 cultural program</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="perfToggle" onchange="togglePerf()">
+          <span class="toggle-track"></span>
+        </label>
+      </div>
+      <div class="perf-fields" id="perfFields">
+        <div class="fg">
+          <label>Performance Type <span class="req">*</span></label>
+          <div class="pills">
+            <label class="pill"><input type="radio" name="perfType" value="song"><span class="pill-label">&#127908; Group Song</span></label>
+            <label class="pill"><input type="radio" name="perfType" value="dance"><span class="pill-label">&#128131; Group Dance</span></label>
+            <label class="pill"><input type="radio" name="perfType" value="fashion"><span class="pill-label">&#128087; Ladies Fashion Show</span></label>
+            <label class="pill"><input type="radio" name="perfType" value="other"><span class="pill-label">&#127917; Other</span></label>
+          </div>
+        </div>
+        <div class="row" style="margin-top:0.6rem;">
+          <div class="fg">
+            <label>Duration</label>
+            <select id="perfDur">
+              <option value="">Select</option>
+              <option value="0-3">0–3 minutes</option>
+              <option value="3-5">3–5 minutes</option>
+              <option value="5+">5+ minutes</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Props Needed?</label>
+            <input type="text" id="perfProps" placeholder="Describe any props">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Payment -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-saffron">&#128179;</div>
+        <div class="section-title">Payment Method <span class="req">*</span></div>
+      </div>
+
+      <div class="pay-options">
+        <div class="pay-opt" id="optZelle" onclick="pickPay('zelle')">
+          <input type="radio" name="pay" value="zelle">
+          <div class="pay-head">&#128178; Zelle</div>
+          <div class="pay-body">
+            <div class="pay-info"><span class="pay-info-label">Send to:</span><span>[ZELLE_EMAIL_OR_PHONE]</span></div>
+            <div class="pay-note">Include your full name as the memo.</div>
+          </div>
+        </div>
+        <div class="pay-opt" id="optVenmo" onclick="pickPay('venmo')">
+          <input type="radio" name="pay" value="venmo">
+          <div class="pay-head">&#128176; Venmo</div>
+          <div class="pay-body">
+            <div class="pay-info"><span class="pay-info-label">Handle:</span><span>[VENMO_HANDLE]</span></div>
+            <div class="pay-note">Include your name + "Yugadi 2026" in the note.</div>
+          </div>
+        </div>
+        <div class="pay-opt" id="optPaypal" onclick="pickPay('paypal')">
+          <input type="radio" name="pay" value="paypal">
+          <div class="pay-head">&#128179; PayPal</div>
+          <div class="pay-body">
+            <div class="pay-info"><span class="pay-info-label">PayPal:</span><span>[PAYPAL_EMAIL]</span></div>
+            <div class="pay-note">Send as "Friends &amp; Family" with your name.</div>
+          </div>
+        </div>
+        <div class="pay-opt" id="optDoor" onclick="pickPay('door')">
+          <input type="radio" name="pay" value="door">
+          <div class="pay-head">&#127978; Pay at the Door</div>
+          <div class="pay-body">
+            Cash &amp; cards accepted at the venue. <strong>Early bird discount does not apply</strong> for at-the-door payments.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Additional Info -->
+    <div class="form-section">
+      <div class="section-head">
+        <div class="section-icon si-green">&#128221;</div>
+        <div class="section-title">Additional Information</div>
+      </div>
+      <div class="fg">
+        <label>Special Requests or Comments</label>
+        <textarea id="notes" placeholder="Anything else you'd like us to know?"></textarea>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="submit-area">
+      <button type="submit" class="btn-submit">Register Now</button>
+      <div class="footer-note">
+        By registering, you agree to receive event updates from Sharavathi Kannada Balaga.<br>
+        Questions? Call <strong>202-768-8161</strong> or email <a href="mailto:mail.president@sharavationline.org">mail.president@sharavationline.org</a><br>
+        Visit <a href="https://www.sharavationline.org" target="_blank">www.sharavationline.org</a>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<!-- Confirmation Modal -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="modal-icon">&#10003;</div>
+    <h2>Registration Successful!</h2>
+    <p id="modalMsg"></p>
+    <button class="btn-done" onclick="closeModal()">Done</button>
+  </div>
+</div>
+
+<script>
+  // ===== STATE =====
+  const S = { membership: null, adults: 1, kids: 0, u5: 0, pay: null, day1: true, day2: false };
+
+  // ===== PRICING =====
+  const P = {
+    member:       { day1: { adult: 35, kid: 18 }, day2: { adult: 25, kid: 15 } },
+    'non-member': { day1: { adult: 42, kid: 20 }, day2: { adult: 32, kid: 18 } }
+  };
+
+  const EARLY_DEADLINE = new Date('2026-03-31T23:59:59');
+  const earlyBird = () => new Date() <= EARLY_DEADLINE;
+
+  // ===== EVENT SELECTION =====
+  function toggleEvent(day) {
+    if (day === 1) {
+      S.day1 = document.getElementById('event1').checked;
+      document.getElementById('ev1Check').classList.toggle('checked', S.day1);
+    } else {
+      S.day2 = document.getElementById('event2').checked;
+      document.getElementById('ev2Check').classList.toggle('checked', S.day2);
+    }
+    updatePricingCards();
+    updateSummary();
+  }
+
+  function updatePricingCards() {
+    document.getElementById('memberPricesDay1').style.display = S.day1 ? 'block' : 'none';
+    document.getElementById('memberPricesDay2').style.display = S.day2 ? 'block' : 'none';
+    document.getElementById('nonMemberPricesDay1').style.display = S.day1 ? 'block' : 'none';
+    document.getElementById('nonMemberPricesDay2').style.display = S.day2 ? 'block' : 'none';
+  }
+
+  // ===== MEMBERSHIP =====
+  function pickMembership(type) {
+    S.membership = type;
+    document.getElementById('mcardMember').classList.toggle('active', type === 'member');
+    document.getElementById('mcardNon').classList.toggle('active', type === 'non-member');
+    document.getElementById('memberIdBox').style.display = type === 'member' ? 'block' : 'none';
+    updateSummary();
+  }
+
+  // ===== COUNTERS =====
+  function adj(key, d) {
+    const min = key === 'adults' ? 1 : 0;
+    S[key] = Math.max(min, S[key] + d);
+    document.getElementById('v' + key.charAt(0).toUpperCase() + key.slice(1)).textContent = S[key];
+    document.getElementById('kidsBox').style.display = (S.kids + S.u5 > 0) ? 'block' : 'none';
+    updateSummary();
+  }
+
+  // ===== SUMMARY =====
+  function updateSummary() {
+    if (!S.membership || (!S.day1 && !S.day2)) {
+      document.getElementById('summaryBox').style.display = 'none';
+      return;
+    }
+
+    const p = P[S.membership];
+    const eb = earlyBird() && S.pay !== 'door';
+    let html = '', total = 0;
+
+    if (S.day1) {
+      html += '<div style="font-size:0.78rem;font-weight:600;color:var(--text-light);margin:0.3rem 0 0.1rem;text-transform:uppercase;letter-spacing:1px;">Day 1 — Yugadi</div>';
+      if (S.adults > 0) { const v = S.adults * p.day1.adult; total += v; html += srow(S.adults + ' x Adult', '$' + v.toFixed(2)); }
+      if (S.kids > 0) { const v = S.kids * p.day1.kid; total += v; html += srow(S.kids + ' x Kids (5\u201315)', '$' + v.toFixed(2)); }
+      if (S.u5 > 0) html += srow(S.u5 + ' x Under 5', 'Free');
+    }
+
+    if (S.day2) {
+      html += '<div style="font-size:0.78rem;font-weight:600;color:var(--text-light);margin:0.5rem 0 0.1rem;text-transform:uppercase;letter-spacing:1px;">Day 2 — Badoota</div>';
+      if (S.adults > 0) { const v = S.adults * p.day2.adult; total += v; html += srow(S.adults + ' x Adult', '$' + v.toFixed(2)); }
+      if (S.kids > 0) { const v = S.kids * p.day2.kid; total += v; html += srow(S.kids + ' x Kids (5\u201315)', '$' + v.toFixed(2)); }
+      if (S.u5 > 0) html += srow(S.u5 + ' x Under 5', 'Free');
+    }
+
+    let disc = 0;
+    if (eb) {
+      disc = total * 0.10;
+      html += '<div class="srow"><span>Early Bird Discount (10%)</span><span class="discount">\u2212$' + disc.toFixed(2) + '</span></div>';
+    }
+
+    const grand = total - disc;
+    html += '<div class="srow total"><span>Total</span><span>$' + grand.toFixed(2) + '</span></div>';
+
+    document.getElementById('summaryContent').innerHTML = html;
+    document.getElementById('summaryBox').style.display = 'block';
+  }
+
+  function srow(l, r) { return '<div class="srow"><span>' + l + '</span><span>' + r + '</span></div>'; }
+
+  // ===== PAYMENT =====
+  function pickPay(m) {
+    S.pay = m;
+    ['zelle','venmo','paypal','door'].forEach(k => {
+      const el = document.getElementById('opt' + k.charAt(0).toUpperCase() + k.slice(1));
+      el.classList.toggle('active', k === m);
+      el.querySelector('input').checked = (k === m);
+    });
+    updateSummary();
+  }
+
+  // ===== PERFORMANCE TOGGLE =====
+  function togglePerf() {
+    document.getElementById('perfFields').classList.toggle('show', document.getElementById('perfToggle').checked);
+  }
+
+  // ===== SUBMIT =====
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!S.day1 && !S.day2) { alert('Please select at least one event.'); return false; }
+    if (!S.membership) { alert('Please select membership type.'); return false; }
+    if (!S.pay) { alert('Please select a payment method.'); return false; }
+
+    const fn = document.getElementById('fname').value.trim();
+    const ln = document.getElementById('lname').value.trim();
+    const em = document.getElementById('email').value.trim();
+    const p = P[S.membership];
+    const eb = earlyBird() && S.pay !== 'door';
+
+    let total = 0;
+    if (S.day1) total += S.adults * p.day1.adult + S.kids * p.day1.kid;
+    if (S.day2) total += S.adults * p.day2.adult + S.kids * p.day2.kid;
+    if (eb) total *= 0.90;
+
+    let events = [];
+    if (S.day1) events.push('Yugadi (April 18)');
+    if (S.day2) events.push('Badoota (April 19)');
+
+    const payLabel = S.pay.charAt(0).toUpperCase() + S.pay.slice(1);
+
+    document.getElementById('modalMsg').innerHTML =
+      'Thank you, <strong>' + fn + ' ' + ln + '</strong>!<br>' +
+      'Events: <strong>' + events.join(' &amp; ') + '</strong><br>' +
+      'Total: <strong>$' + total.toFixed(2) + '</strong>' + (eb ? ' <span style="color:var(--green)">(incl. early bird)</span>' : '') + '<br><br>' +
+      (S.pay === 'door'
+        ? 'Please bring payment to the venue.'
+        : 'Please complete payment via <strong>' + payLabel + '</strong> at your earliest convenience.') +
+      '<br><br>Confirmation will be sent to <strong>' + em + '</strong>.';
+
+    document.getElementById('modalBg').classList.add('show');
+    return false;
+  }
+
+  function closeModal() { document.getElementById('modalBg').classList.remove('show'); }
+
+  // Init: check early bird
+  if (!earlyBird()) {
+    document.getElementById('earlyBirdBanner').style.display = 'none';
+    document.getElementById('memberEarly').style.display = 'none';
+    document.getElementById('nonMemberEarly').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

@@ -1534,6 +1534,9 @@ function handleSubmit(e) {
   // --- SQUARE: redirect through Apps Script to Square checkout (no CORS issues) ---
   if (S.pay === 'Square') {
     pendingRegistration = data;
+    const fn = document.getElementById('firstName').value.trim();
+    const ln = document.getElementById('lastName').value.trim();
+    const em = document.getElementById('email').value.trim();
 
     // Save registration data to sessionStorage BEFORE redirecting
     try { sessionStorage.setItem('pendingReg', JSON.stringify(data)); } catch(e) {}
